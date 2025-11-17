@@ -2,9 +2,7 @@ package com.afkpavi.jobPortal.controller;
 
 import com.afkpavi.jobPortal.model.JobPost;
 import com.afkpavi.jobPortal.service.JobService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,16 @@ public class JobPostController {
     @GetMapping("jobs")
     public List<JobPost> getJobs(){
         return this.jobPostService.getAllJobPosts();
+    }
+
+    @PostMapping("job")
+    public void addJob(@RequestBody JobPost jobPost){
+        this.jobPostService.addJobPost(jobPost);
+    }
+
+    @GetMapping("job/{id}")
+    public JobPost getJobPost(@PathVariable int id){
+        return this.jobPostService.getJobPost(id);
     }
 
 }

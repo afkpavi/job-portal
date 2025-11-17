@@ -18,4 +18,13 @@ public class JobService {
         return  this.jobPostRepository.getJobPosts();
     }
 
+    public JobPost getJobPost(int id){
+        return this.jobPostRepository.getJobPost(id);
+    }
+
+    public void addJobPost(JobPost jbp){
+        this.jobPostRepository.addJobPost(jbp);
+    };
+
+
 }
