@@ -1,10 +1,29 @@
-import Image from "next/image";
-import Navbar from "./components/Navbar";
+"use client";
+
+import JobPostCard from "./components/JobPostCard";
+import { Container, Box } from "@mui/material";
+import { useGetJobPostsQuery } from "./redux/features/jobPost/jobPostSlice";
 
 export default function Home() {
+  const { isLoading, isError, data } = useGetJobPostsQuery();
+
+  if (isLoading) {
+    return <h1>Loading....</h1>;
+  }
+
+  if (isError) {
+    return <h1>Error... </h1>;
+  }
+
   return (
     <main>
-      <Navbar />
+      <Container>
+        <Box display="flex" flexWrap="wrap">
+          {data?.map((card) => (
+            <JobPostCard key={card.id} {...card} />
+          ))}
+        </Box>
+      </Container>
     </main>
   );
 }

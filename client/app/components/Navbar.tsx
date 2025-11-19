@@ -40,7 +40,7 @@ const Navbar = (props: Props) => {
   const menuIcon = !drawerState ? <MenuIcon /> : <CloseIcon />;
 
   return (
-    <AppBar sx={{ height: "64px" }}>
+    <AppBar position="sticky" sx={{ height: "64px" }}>
       <Toolbar>
         <IconButton color="inherit">
           <WorkIcon />
