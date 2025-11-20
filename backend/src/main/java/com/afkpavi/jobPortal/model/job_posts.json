@@ -38,5 +38,35 @@
     "description": "Join our team as a DevOps specialist. Experience with AWS, Docker, and Kubernetes is a must.",
     "salary": "95,000 - 115,000 USD",
     "datePosted": "2025-11-01"
+  },
+  {
+    "id": 5,
+    "title": "Backend Engineer",
+    "company": "DataCorp",
+    "location": "New York, NY",
+    "type": "Contract",
+    "description": "Experienced backend engineer needed for a 6-month project. Knowledge of Node.js and MongoDB required.",
+    "salary": "Competitive hourly rate",
+    "datePosted": "2025-10-20"
+  },
+  {
+    "id": 6,
+    "title": "UX Designer",
+    "company": "Creative Minds",
+    "location": "San Francisco, CA",
+    "type": "Part-Time",
+    "description": "Looking for a creative UX designer to improve user experience on our platform. Must have a strong portfolio.",
+    "salary": "Negotiable",
+    "datePosted": "2025-10-25"
+  },
+  {
+    "id": 7,
+    "title": "DevOps Specialist",
+    "company": "Cloud Services Ltd.",
+    "location": "Remote",
+    "type": "Full-Time",
+    "description": "Join our team as a DevOps specialist. Experience with AWS, Docker, and Kubernetes is a must.",
+    "salary": "95,000 - 115,000 USD",
+    "datePosted": "2025-11-01"
   }
 ]

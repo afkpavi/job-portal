@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main>
       <Container>
-        <Box display="flex" flexWrap="wrap">
+        <Box display="flex" flexWrap="wrap" sx={{justifyContent: {xs: 'center', lg: 'flex-start'}}}>
           {data?.map((card) => (
             <JobPostCard key={card.id} {...card} />
           ))}
