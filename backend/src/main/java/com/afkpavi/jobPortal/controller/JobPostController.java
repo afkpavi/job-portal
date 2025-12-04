@@ -17,6 +17,12 @@ public class JobPostController {
         this.jobPostService = jbps;
     }
 
+    @PostMapping("seed")
+    public List<JobPost> seedJobsFromJson(){
+        this.jobPostService.seedJobPostsFromJson();
+        return this.jobPostService.getAllJobPosts();
+    }
+
     @GetMapping("jobs")
     public List<JobPost> getJobs(){
         return this.jobPostService.getAllJobPosts();

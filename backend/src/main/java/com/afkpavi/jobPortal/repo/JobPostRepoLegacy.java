@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Repository
-public class JobPostRepo {
+public class JobPostRepoLegacy {
 
     ObjectMapper mapper = new ObjectMapper();
     File jop_post_file = new File("src/main/java/com/afkpavi/jobPortal/model/job_posts.json");

@@ -1,11 +1,16 @@
 package com.afkpavi.jobPortal.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
+import org.springframework.context.annotation.Primary;
 
 import java.util.List;
 
 @Data
+@Entity
 public class JobPost {
+    @Id
     private int id;
     private String title;
     private String company;

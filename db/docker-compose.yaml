@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: jobs_db
+      POSTGRES_USER: afkpavi
+      POSTGRES_PASSWORD: test
+    volumes:
+      - ./pgdata:/var/lib/posgresql
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    ports:
+      - 8888:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: afkpavi@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: test
